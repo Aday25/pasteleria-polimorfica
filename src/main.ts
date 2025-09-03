@@ -112,7 +112,7 @@ function crearTarta(tipo: string): Tarta {
     case 'fresa': return new TartaFresa();
     case 'queso': return new TartaQueso();
     case 'limon': return new TartaLimon();
-    //case 'zanahoria': return new TartaZanahoria();
+    
     default: return new TartaChocolate();
   }
 }
