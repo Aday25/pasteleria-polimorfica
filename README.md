@@ -1,6 +1,6 @@
 # Pastelería Polimórfica en TypeScript
 
-## 🍰 Descripción de la pildora
+## 🍰 Descripción de la píldora
 
 Esta pildora formativa tiene como objetivo enseñar **polimorfismo y herencia en TypeScript** mediante una presentación explicativa y un ejemplo práctico: 
 la creación de diferentes tartas. Cada clase de tarta tiene sus **ingredientes específicos** y su propia manera de **hornearse**, demostrando cómo un mismo método (`hornear()`) puede comportarse diferente según la clase concreta.
