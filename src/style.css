@@ -1,25 +1,150 @@
-* { box-sizing: border-box; }
-html, body { height: 100%; }
-body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; line-height: 1.5; background: #fafafa; color: #0f172a; }
+/* ---------------- Reset y base ---------------- */
+* {
+  box-sizing: border-box;
+}
 
-.container { max-width: 960px; margin: 0 auto; padding: 16px; }
-header { background: linear-gradient(135deg,#fce7f3,#e0f2fe); border-bottom: 1px solid #e2e8f0; }
-h1 { margin: 0; padding: 16px 0; }
+html, body {
+  height: 100%;
+}
 
-.controls { display: flex; gap: 8px; align-items: center; margin: 16px 0; flex-wrap: wrap; }
-.controls button { border: 0; padding: 8px 12px; border-radius: 12px; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,.08); background: #4f46e5; color: white; }
-.controls select { padding: 8px; border-radius: 8px; border: 1px solid #cbd5e1; background: white; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.5;
+  background: #fafafa;
+  color: #0f172a;
+}
 
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
-.card { background: white; border: 1px solid #e2e8f0; border-radius: 16px; padding: 12px; box-shadow: 0 2px 8px rgba(0,0,0,.05); display: flex; flex-direction: column; gap: 8px; }
-.card h3 { margin: 0; font-size: 18px; }
-.card p { margin: 0; color: #475569; }
-.card .btn-primary { align-self: start; border: 0; padding: 8px 12px; border-radius: 10px; cursor: pointer; background: #0ea5e9; color: white; box-shadow: 0 2px 6px rgba(0,0,0,.08); }
-.card .btn-primary:hover { filter: brightness(0.95); }
+/* ---------------- Contenedor ---------------- */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px;
+}
 
-#resultados { list-style: none; padding: 0; display: grid; gap: 8px; }
-#resultados li { background: #f8fafc; padding: 8px 12px; border-radius: 8px; border: 1px solid #e2e8f0; }
+header.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* título a la izquierda, imagen a la derecha */
+  background: linear-gradient(135deg,#93eca3,#f0f56c);
+  border-bottom: 1px solid #e2e8f0;
+  padding: 16px;
+  flex-wrap: wrap; /* para pantallas pequeñas */
+}
 
+header.header h1 {
+  margin: 0;
+  font-size: 2rem;
+  flex: 1; /* ocupa el espacio disponible */
+  color:#0e6e88
+}
+
+header.header h2 {
+  width: 100%;
+  margin-top: 8px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #454e5b;
+}
+
+header.header .header-img {
+  max-height: 120px;   
+  width: auto;        
+  max-width: 250px;
+  object-fit: contain;
+  margin-left: 16px;
+}
+
+/* ---------------- Controles ---------------- */
+.controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 16px 0;
+  flex-wrap: wrap;
+}
+
+.controls button {
+  border: 0;
+  padding: 8px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+  background: #93eca3;
+  color: rgb(16, 15, 15);
+}
+
+.controls button:hover {
+ filter: brightness(0.85);
+}
+
+.controls select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background: white;
+}
+
+/* ---------------- Grid de tartas ---------------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.card p {
+  margin: 0;
+  color: #475569;
+}
+
+.card .btn-primary {
+  align-self: start;
+  border: 0;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #f0f56c;
+  color: rgb(9, 9, 9);
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+  font-size: 16px;
+}
+
+.card .btn-primary:hover {
+  filter: brightness(0.85);
+}
+
+/* ---------------- Resultados ---------------- */
+#resultados {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+#resultados li {
+  background: #f8fafc;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+/* ---------------- Footer ---------------- */
 footer {
   background-color: #135c72;
   color: #ffffff;
@@ -40,7 +165,6 @@ footer {
   font-size: 1rem;
 }
 
-/* Línea de copyright + contactos */
 .footer-line {
   display: flex;
   align-items: center;
@@ -57,15 +181,7 @@ footer {
   font-weight: bold;
 }
 
-/* Enlaces con iconos y texto */
-.factoria {
-  color: orange;
-}
-
-.factoria:hover{
-  color:rgb(242, 255, 0);
-}
-
+/* Enlaces con iconos */
 .icon-link {
   display: inline-flex;
   align-items: center;
@@ -76,15 +192,13 @@ footer {
   transition: color 0.3s ease;
 }
 
-/* Iconos SVG */
 .icon-link svg {
   fill: currentColor;
 }
 
-/* Colores específicos para cada enlace */
+/* Colores específicos */
 .icon-link.github {
   color: #fff;
-  /* blanco */
 }
 
 .icon-link.github:hover {
@@ -93,7 +207,6 @@ footer {
 
 .icon-link.linkedin {
   color: #8bbdee;
-  /* azul LinkedIn */
 }
 
 .icon-link.linkedin:hover {
@@ -102,12 +215,20 @@ footer {
 
 .icon-link.email-icon {
   color: #70f8bb;
-  /* naranja */
 }
 
 .icon-link.email-icon:hover {
   color: #0dcd27;
 }
+
+.factoria {
+  color: orange;
+}
+
+.factoria:hover {
+  color: rgb(230, 194, 129);
+}
+
 
 /* Logo footer */
 .logo-footer {
@@ -116,4 +237,3 @@ footer {
   object-fit: contain;
   margin-top: 12px;
 }
-
