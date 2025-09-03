@@ -51,11 +51,7 @@ class TartaLimon extends Tarta {
   protected ingredientesEspecificos(): string[] { return ["Limón", "Ralladura de limón"]; }
 }
 
-class TartaZanahoria extends Tarta {
-  constructor() { super("zanahoria", "/zanahoria.png"); }
-  hornear(): string { return `🥕 ${this.nombre}: horneando… ¡Lista!`; }
-  protected ingredientesEspecificos(): string[] { return ["Zanahorias", "Canela", "Aceite"]; }
-}
+
 
 // Array de tartas inicial vacío
 const tartas: Tarta[] = [

@@ -84,15 +84,7 @@ class TartaLimon extends Tarta {
   }
 }
 
-class TartaZanahoria extends Tarta {
-  constructor() { super("zanahoria", "/zanahoria.png"); }
-  hornear(): string {
-    return `🥕 ${this.nombre}: rallando zanahorias… Horneando a 175ºC durante 35 min. ¡Lista!`;
-  }
-  protected ingredientesEspecificos(): string[] {
-    return ["Zanahorias", "Canela", "Aceite"];
-  }
-}
+
 
 // -------------------- ESTADO INICIAL --------------------
 
